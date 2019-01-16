@@ -3,6 +3,8 @@ filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.config/nvim/bundle/Vundle.vim
+set rtp+=/usr/local/opt/fzf
+
 call vundle#begin()
 " alternatively, pass a path where Vundle should install plugins
 "call vundle#begin('~/some/path/here')
@@ -40,7 +42,7 @@ Plugin 'mhinz/vim-startify'
 Plugin 'w0rp/ale'
 Plugin 'tpope/vim-rhubarb'
 Plugin 'junegunn/fzf.vim'
-Plugin 'szw/vim-tags'
+Plugin 'ludovicchabant/vim-gutentags'
 
 " Ale auto correct for JS
 let g:ale_fixers = {
@@ -141,4 +143,4 @@ autocmd FileType go setlocal nolist
 noremap <Leader>a :Ack! <cword><cr>
 " noremap <Leader>aa :Ack! <cr>
 
-set rtp+=/usr/local/opt/fzf
+let g:vim_tags_project_tags_command = "{CTAGS} -R {OPTIONS} {DIRECTORY}"
