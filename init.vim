@@ -142,5 +142,3 @@ autocmd FileType go setlocal nolist
 " call esearch#map('<leader>fw', 'esearch-word-under-cursor')
 noremap <Leader>a :Ack! <cword><cr>
 " noremap <Leader>aa :Ack! <cr>
-
-let g:vim_tags_project_tags_command = "{CTAGS} -R {OPTIONS} {DIRECTORY}"
