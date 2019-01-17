@@ -39,19 +39,10 @@ Plugin 'mileszs/ack.vim'
 Plugin 'isRuslan/vim-es6'
 Plugin 'eugen0329/vim-esearch'
 Plugin 'mhinz/vim-startify'
-Plugin 'w0rp/ale'
 Plugin 'tpope/vim-rhubarb'
 Plugin 'junegunn/fzf.vim'
 Plugin 'ludovicchabant/vim-gutentags'
 
-" Ale auto correct for JS
-let g:ale_fixers = {
-\   'javascript': ['remove_trailing_lines', 'trim_whitespace'],
-\   'ruby': ['remove_trailing_lines', 'trim_whitespace']
-\}
-
-let g:ale_fix_on_save = 0
-"
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 syntax enable
