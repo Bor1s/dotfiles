@@ -142,3 +142,5 @@ autocmd FileType go setlocal nolist
 " call esearch#map('<leader>fw', 'esearch-word-under-cursor')
 noremap <Leader>a :Ack! <cword><cr>
 " noremap <Leader>aa :Ack! <cr>
+
+nnoremap ,c :let @* = expand("%:p").":".line('.')<cr>
