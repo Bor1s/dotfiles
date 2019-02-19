@@ -4,6 +4,7 @@ filetype off                  " required
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.config/nvim/bundle/Vundle.vim
 set rtp+=/usr/local/opt/fzf
+set termguicolors
 
 call vundle#begin()
 " alternatively, pass a path where Vundle should install plugins
@@ -42,6 +43,7 @@ Plugin 'mhinz/vim-startify'
 Plugin 'tpope/vim-rhubarb'
 Plugin 'junegunn/fzf.vim'
 Plugin 'ludovicchabant/vim-gutentags'
+Plugin 'iCyMind/NeoSolarized'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -63,8 +65,8 @@ runtime macros/matchit.vim
 
 " Colorscheme
 set background=light
-colorscheme solarized
-let g:solarized_diffmode="high"    "default value is normal
+let g:neosolarized_diffmode="high"    "default value is normal
+colorscheme NeoSolarized
 
 " NERDTree config
 " autocmd vimenter * NERDTree
