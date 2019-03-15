@@ -23,7 +23,6 @@ Plugin 'VundleVim/Vundle.vim'
 " plugin on GitHub repo
 Plugin 'scrooloose/nerdtree'
 Plugin 'tpope/vim-fugitive'
-Plugin 'kien/ctrlp.vim'
 Plugin 'bling/vim-airline'
 Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-surround'
@@ -34,12 +33,8 @@ Plugin 'tpope/vim-endwise'
 Plugin 'tomtom/tcomment_vim'
 Plugin 'tmhedberg/matchit'
 Plugin 'terryma/vim-multiple-cursors'
-Plugin 'kchmck/vim-coffee-script'
 Plugin 'fatih/vim-go'
 Plugin 'mileszs/ack.vim'
-Plugin 'isRuslan/vim-es6'
-Plugin 'eugen0329/vim-esearch'
-Plugin 'mhinz/vim-startify'
 Plugin 'tpope/vim-rhubarb'
 Plugin 'junegunn/fzf.vim'
 Plugin 'ludovicchabant/vim-gutentags'
@@ -121,11 +116,6 @@ set laststatus=2
 
 " Fugitive Gdiff vertical split
 set diffopt+=vertical
-
-" CtrlP
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip
-" let g:ctrlp_working_path_mode = 0
-let g:ctrlp_custom_ignore = 'vendor\|tmp'
 
 " Go specific setup
 autocmd FileType go setlocal tabstop=4 shiftwidth=4 softtabstop=4
