@@ -3,8 +3,11 @@
 --ignore-dir=tmp
 --ignore-dir=public/assets
 --ignore-dir=vendor/bundle
+--ignore-dir=node_modules/
 --ignore-file=is:.tags
 --ignore-file=is:tags
+--ignore-file=is:tags.tmp
+--ignore-file=is:tags.temp
 --ignore-file=is:.keep
 --color
 --follow
