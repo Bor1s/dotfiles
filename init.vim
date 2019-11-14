@@ -28,7 +28,6 @@ Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-surround'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'pangloss/vim-javascript'
-Plugin 'altercation/vim-colors-solarized'
 Plugin 'tpope/vim-endwise'
 Plugin 'tomtom/tcomment_vim'
 Plugin 'tmhedberg/matchit'
@@ -38,7 +37,7 @@ Plugin 'mileszs/ack.vim'
 Plugin 'tpope/vim-rhubarb'
 Plugin 'junegunn/fzf.vim'
 Plugin 'ludovicchabant/vim-gutentags'
-Plugin 'iCyMind/NeoSolarized'
+Plugin 'lifepillar/vim-solarized8'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -60,16 +59,14 @@ runtime macros/matchit.vim
 
 " Colorscheme
 set background=light
-let g:neosolarized_diffmode="high"    "default value is normal
-colorscheme NeoSolarized
+colorscheme solarized8
+let g:solarized_diffmode="high"
 
 " NERDTree config
 " autocmd vimenter * NERDTree
 map <TAB> :NERDTreeToggle<CR>
 let NERDTreeChDirMode=1
 
-" set guifont=Monaco:h14
-set guifont=Roboto\ Mono\ Medium\ for\ Powerline:h14
 set encoding=utf-8 nobomb
 
 " Don’t add empty newlines at the end of files
