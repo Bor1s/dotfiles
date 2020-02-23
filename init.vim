@@ -123,4 +123,10 @@ autocmd FileType go setlocal nolist
 noremap <Leader>a :Ack! <cword><cr>
 " noremap <Leader>aa :Ack! <cr>
 
+" Copy full file path with line number under cursor
 nnoremap ,c :let @* = expand("%:p").":".line('.')<cr>
+
+" Highlight trailing whitespaces
+highlight ws ctermbg=red guibg=red
+match ws /\s\+$/
+autocmd BufWinEnter * match ws / \+$/
