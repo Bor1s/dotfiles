@@ -38,6 +38,9 @@ Plugin 'tpope/vim-rhubarb'
 Plugin 'junegunn/fzf.vim'
 Plugin 'lifepillar/vim-solarized8'
 Plugin 'neoclide/coc.nvim'
+Plugin 'leafgarland/typescript-vim'
+Plugin 'peitalin/vim-jsx-typescript'
+Plugin 'mustache/vim-mustache-handlebars'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -74,8 +77,8 @@ set binary
 set noeol
 
 " Centralize backups, swapfiles and undo history
-set backupdir=~/.config/nvim/backups
-set directory=~/.config/nvim/swaps
+" set backupdir=~/.config/nvim/backups
+" set directory=~/.config/nvim/swaps
 if exists("&undodir")
   set undodir=~/.config/nvim/undo
 endif
