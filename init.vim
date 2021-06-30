@@ -6,44 +6,31 @@ set rtp+=~/.config/nvim/bundle/Vundle.vim
 set rtp+=/usr/local/opt/fzf
 set termguicolors
 
-call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
+call plug#begin('~/.config/nvim/plugged')
 
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
+Plug 'scrooloose/nerdtree'
+Plug 'tpope/vim-fugitive'
+Plug 'bling/vim-airline'
+Plug 'tpope/vim-rails'
+Plug 'tpope/vim-surround'
+Plug 'vim-ruby/vim-ruby'
+Plug 'pangloss/vim-javascript'
+Plug 'tpope/vim-endwise'
+Plug 'tomtom/tcomment_vim'
+Plug 'tmhedberg/matchit'
+Plug 'terryma/vim-multiple-cursors'
+Plug 'fatih/vim-go'
+Plug 'mileszs/ack.vim'
+Plug 'tpope/vim-rhubarb'
+Plug 'junegunn/fzf.vim'
+Plug 'lifepillar/vim-solarized8'
+Plug 'neoclide/coc.nvim'
+Plug 'leafgarland/typescript-vim'
+Plug 'peitalin/vim-jsx-typescript'
+Plug 'mustache/vim-mustache-handlebars'
 
-" The following are examples of different formats supported.
-" Keep Plugin commands between vundle#begin/end.
-" plugin on GitHub repo
-"
+call plug#end()            " required
 
-" The following are examples of different formats supported.
-" Keep Plugin commands between vundle#begin/end.
-" plugin on GitHub repo
-Plugin 'scrooloose/nerdtree'
-Plugin 'tpope/vim-fugitive'
-Plugin 'bling/vim-airline'
-Plugin 'tpope/vim-rails'
-Plugin 'tpope/vim-surround'
-Plugin 'vim-ruby/vim-ruby'
-Plugin 'pangloss/vim-javascript'
-Plugin 'tpope/vim-endwise'
-Plugin 'tomtom/tcomment_vim'
-Plugin 'tmhedberg/matchit'
-Plugin 'terryma/vim-multiple-cursors'
-Plugin 'fatih/vim-go'
-Plugin 'mileszs/ack.vim'
-Plugin 'tpope/vim-rhubarb'
-Plugin 'junegunn/fzf.vim'
-Plugin 'lifepillar/vim-solarized8'
-Plugin 'neoclide/coc.nvim'
-Plugin 'leafgarland/typescript-vim'
-Plugin 'peitalin/vim-jsx-typescript'
-Plugin 'mustache/vim-mustache-handlebars'
-
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
 syntax enable
 filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
