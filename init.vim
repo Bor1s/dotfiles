@@ -19,7 +19,7 @@ Plug 'tpope/vim-endwise'
 Plug 'tomtom/tcomment_vim'
 Plug 'tmhedberg/matchit'
 Plug 'terryma/vim-multiple-cursors'
-Plug 'fatih/vim-go'
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'mileszs/ack.vim'
 Plug 'tpope/vim-rhubarb'
 Plug 'junegunn/fzf.vim'
@@ -28,6 +28,7 @@ Plug 'neoclide/coc.nvim'
 Plug 'leafgarland/typescript-vim'
 Plug 'peitalin/vim-jsx-typescript'
 Plug 'mustache/vim-mustache-handlebars'
+Plug 'marko-cerovac/material.nvim'
 
 call plug#end()            " required
 
@@ -48,9 +49,13 @@ filetype plugin indent on    " required
 runtime macros/matchit.vim
 
 " Colorscheme
-set background=light
-colorscheme solarized8
-let g:solarized_diffmode="high"
+" set background=light
+" colorscheme solarized8
+" let g:solarized_diffmode="high"
+let g:material_style = 'lighter'
+let g:material_borders = v:true
+
+colorscheme material
 
 " NERDTree config
 " autocmd vimenter * NERDTree
