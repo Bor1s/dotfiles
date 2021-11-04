@@ -30,6 +30,7 @@ Plug 'leafgarland/typescript-vim'
 Plug 'peitalin/vim-jsx-typescript'
 Plug 'mustache/vim-mustache-handlebars'
 Plug 'marko-cerovac/material.nvim'
+Plug 'github/copilot.vim'
 
 vim.call('plug#end')
 
