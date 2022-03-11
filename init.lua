@@ -30,7 +30,6 @@ Plug 'leafgarland/typescript-vim'
 Plug 'peitalin/vim-jsx-typescript'
 Plug 'mustache/vim-mustache-handlebars'
 Plug 'marko-cerovac/material.nvim'
-Plug 'github/copilot.vim'
 
 vim.call('plug#end')
 
@@ -41,7 +40,7 @@ vim.cmd [[
 ]]
 
 -- Material Vim colorscheme
-vim.g.material_style = "oceanic"
+vim.g.material_style = "lighter"
 
 require('material').setup({
   contrast = true, -- Enable contrast for sidebars, floating windows and popup menus like Nvim-Tree
@@ -64,7 +63,7 @@ require('material').setup({
   },
 
   text_contrast = {
-    lighter = false, -- Enable higher contrast text for lighter style
+    lighter = true, -- Enable higher contrast text for lighter style
     darker = true-- Enable higher contrast text for darker style
   }
 })
@@ -107,8 +106,11 @@ vim.cmd [[
 ]]
 
 -- Enable line numbers
+-- vim.cmd [[
+--   set relativenumber
+-- ]]
 vim.cmd [[
-  set relativenumber
+  set number
 ]]
 
 -- Show “invisible” characters
