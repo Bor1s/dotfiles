@@ -20,16 +20,16 @@ Plug 'tpope/vim-endwise'
 Plug 'tomtom/tcomment_vim'
 Plug 'tmhedberg/matchit'
 Plug 'terryma/vim-multiple-cursors'
-Plug('fatih/vim-go', {['do'] = ':GoUpdateBinaries'})
 Plug 'mileszs/ack.vim'
 Plug 'tpope/vim-rhubarb'
 Plug 'junegunn/fzf.vim'
 Plug 'lifepillar/vim-solarized8'
-Plug 'neoclide/coc.nvim'
 Plug 'leafgarland/typescript-vim'
 Plug 'peitalin/vim-jsx-typescript'
 Plug 'mustache/vim-mustache-handlebars'
 Plug 'marko-cerovac/material.nvim'
+Plug('fatih/vim-go', {['do'] = ':GoUpdateBinaries'})
+Plug 'neoclide/coc.nvim'
 
 vim.call('plug#end')
 
@@ -150,7 +150,6 @@ vim.cmd [[
 vim.cmd [[
   autocmd FileType go setlocal tabstop=4 shiftwidth=4 softtabstop=4
   autocmd FileType go setlocal nolist
-  let g:go_fmt_command = "goimports"
 ]]
 
 -- Start esearch autofilled with a word under the cursor
@@ -179,22 +178,21 @@ set updatetime=200
 set shortmess+=c
 
 if has("patch-8.1.1564")
-  set signcolumn=number
+	set signcolumn=number
 else
-  set signcolumn=yes
-endif
+	set signcolumn=yes
+	endif
 
-inoremap <silent><expr> <c-space> coc#refresh()
+	inoremap <silent><expr> <c-space> coc#refresh()
 
-nmap <silent> [g <Plug>(coc-diagnostic-prev)
-nmap <silent> ]g <Plug>(coc-diagnostic-next)
+	nmap <silent> [g <Plug>(coc-diagnostic-prev)
+	nmap <silent> ]g <Plug>(coc-diagnostic-next)
 
-nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gy <Plug>(coc-type-definition)
-nmap <silent> gi <Plug>(coc-implementation)
-nmap <silent> gr <Plug>(coc-references)
+	nmap <silent> gd <Plug>(coc-definition)
+	nmap <silent> gy <Plug>(coc-type-definition)
+	nmap <silent> gi <Plug>(coc-implementation)
+	nmap <silent> gr <Plug>(coc-references)
 
-
-set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
-autocmd CursorHold * silent call CocActionAsync('highlight')
+	set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
+	autocmd CursorHold * silent call CocActionAsync('highlight')
 ]]
