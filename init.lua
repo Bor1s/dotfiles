@@ -9,7 +9,6 @@ set.termguicolors = true
 local Plug = vim.fn['plug#']
 vim.call('plug#begin', '~/.config/nvim/plugged')
 
-Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-fugitive'
 Plug 'bling/vim-airline'
 Plug 'tpope/vim-rails'
@@ -22,6 +21,7 @@ Plug 'tmhedberg/matchit'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'mileszs/ack.vim'
 Plug 'tpope/vim-rhubarb'
+Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'lifepillar/vim-solarized8'
 Plug 'leafgarland/typescript-vim'
@@ -30,8 +30,18 @@ Plug 'mustache/vim-mustache-handlebars'
 Plug 'marko-cerovac/material.nvim'
 Plug('fatih/vim-go', {['do'] = ':GoUpdateBinaries'})
 Plug 'neoclide/coc.nvim'
+Plug 'kyazdani42/nvim-tree.lua'
 
 vim.call('plug#end')
+
+-- Functional wrapper for mapping custom keybindings
+function map(mode, lhs, rhs, opts)
+    local options = { noremap = true }
+    if opts then
+        options = vim.tbl_extend("force", options, opts)
+    end
+    vim.api.nvim_set_keymap(mode, lhs, rhs, options)
+end
 
 vim.cmd [[
   syntax enable
@@ -39,8 +49,12 @@ vim.cmd [[
   runtime macros/matchit.vim
 ]]
 
+-- Nvim tree
+require("nvim-tree").setup()
+map("n", "<Leader><Tab>", ":NvimTreeToggle<CR>")
+
 -- Material Vim colorscheme
-vim.g.material_style = "lighter"
+vim.g.material_style = "oceanic"
 
 require('material').setup({
   contrast = {
@@ -71,12 +85,6 @@ require('material').setup({
 })
 
 vim.cmd 'colorscheme material'
-
--- NERDTree config
-vim.cmd [[
-  map <TAB> :NERDTreeToggle<CR>
-  let NERDTreeChDirMode=1
-]]
 
 -- Don’t add empty newlines at the end of files
 vim.cmd[[
