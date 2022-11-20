@@ -54,36 +54,7 @@ require("nvim-tree").setup()
 map("n", "<Leader><Tab>", ":NvimTreeToggle<CR>")
 
 -- Material Vim colorscheme
-vim.g.material_style = "oceanic"
-
-require('material').setup({
-  contrast = {
-    sidebars = true, -- Enable contrast for sidebars, floating windows and popup menus like Nvim-Tree
-    borders = true, -- Enable borders between verticaly split windows
-  },
-
-  popup_menu = "dark", -- Popup menu style ( can be: 'dark', 'light', 'colorful' or 'stealth' )
-
-  italics = {
-    comments = false, -- Enable italic comments
-    keywords = false, -- Enable italic keywords
-    functions = false, -- Enable italic functions
-    strings = false, -- Enable italic strings
-    variables = false -- Enable italic variables
-  },
-
-  contrast_windows = { -- Specify which windows get the contrasted (darker) background
-    "terminal", -- Darker terminal background
-    "packer", -- Darker packer background
-    "qf" -- Darker qf list background
-  },
-
-  text_contrast = {
-    lighter = true, -- Enable higher contrast text for lighter style
-    darker = true-- Enable higher contrast text for darker style
-  }
-})
-
+vim.g.material_style = "palenight"
 vim.cmd 'colorscheme material'
 
 -- Don’t add empty newlines at the end of files
