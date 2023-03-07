@@ -27,10 +27,10 @@ Plug 'lifepillar/vim-solarized8'
 Plug 'leafgarland/typescript-vim'
 Plug 'peitalin/vim-jsx-typescript'
 Plug 'mustache/vim-mustache-handlebars'
-Plug 'marko-cerovac/material.nvim'
 Plug('fatih/vim-go', {['do'] = ':GoUpdateBinaries'})
 Plug 'neoclide/coc.nvim'
 Plug 'kyazdani42/nvim-tree.lua'
+Plug 'ellisonleao/gruvbox.nvim'
 
 vim.call('plug#end')
 
@@ -53,9 +53,8 @@ vim.cmd [[
 require("nvim-tree").setup()
 map("n", "<Leader><Tab>", ":NvimTreeToggle<CR>")
 
--- Material Vim colorscheme
-vim.g.material_style = "palenight"
-vim.cmd 'colorscheme material'
+vim.o.background = 'light'
+vim.cmd.colorscheme "gruvbox"
 
 -- Don’t add empty newlines at the end of files
 vim.cmd[[
