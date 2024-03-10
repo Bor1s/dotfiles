@@ -3,3 +3,10 @@
 -- Add any additional options here
 vim.g.netrw_winsize = 25
 vim.g.netrw_keepdir = 0
+
+vim.wo.relativenumber = false
+
+-- Copy full path to current file + line number.
+vim.cmd([[
+  nnoremap ,c :let @* = expand("%:p").":".line('.')<cr>
+]])
