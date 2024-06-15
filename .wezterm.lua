@@ -15,11 +15,12 @@ config.enable_tab_bar = true
 config.tab_bar_at_bottom = true
 config.hide_tab_bar_if_only_one_tab = true
 
-config.color_scheme = "Tokyo Night"
+-- config.color_scheme = "Tokyo Night"
+config.color_scheme = "Kanagawa (Gogh)"
 
 config.window_decorations = "RESIZE"
-config.window_background_opacity = 0.8
-config.macos_window_background_blur = 8
+config.window_background_opacity = 0.9
+config.macos_window_background_blur = 9
 
 -- Background image settings
 -- config.window_background_image = "/Users/bbkboris/Pictures/wp5144550-retrowave-hd-desktop-wallpapers.jpg"
@@ -46,7 +47,7 @@ config.window_padding = {
 config.scrollback_lines = 10000
 
 -- timeout_milliseconds defaults to 1000 and can be omitted
-config.leader = { key = "a", mods = "CTRL", timeout_milliseconds = 1000 }
+config.leader = { key = "l", mods = "ALT", timeout_milliseconds = 1000 }
 config.keys = {
 	{
 		key = "|",
@@ -60,9 +61,9 @@ config.keys = {
 	},
 	-- Send "CTRL-A" to the terminal when pressing CTRL-A, CTRL-A
 	{
-		key = "a",
+		key = "l",
 		mods = "LEADER",
-		action = wezterm.action.SendKey({ key = "a", mods = "CTRL" }),
+		action = wezterm.action.SendKey({ key = "l", mods = "ALT" }),
 	},
 	{
 		key = "h",
