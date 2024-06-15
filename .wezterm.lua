@@ -46,7 +46,7 @@ config.window_padding = {
 config.scrollback_lines = 10000
 
 -- timeout_milliseconds defaults to 1000 and can be omitted
-config.leader = { key = "w", mods = "CTRL", timeout_milliseconds = 1000 }
+config.leader = { key = "a", mods = "CTRL", timeout_milliseconds = 1000 }
 config.keys = {
 	{
 		key = "|",
@@ -60,9 +60,9 @@ config.keys = {
 	},
 	-- Send "CTRL-A" to the terminal when pressing CTRL-A, CTRL-A
 	{
-		key = "w",
+		key = "a",
 		mods = "LEADER",
-		action = wezterm.action.SendKey({ key = "w", mods = "CTRL" }),
+		action = wezterm.action.SendKey({ key = "a", mods = "CTRL" }),
 	},
 	{
 		key = "h",
