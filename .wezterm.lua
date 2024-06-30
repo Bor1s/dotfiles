@@ -19,11 +19,12 @@ config.hide_tab_bar_if_only_one_tab = true
 -- config.color_scheme = "Kanagawa (Gogh)"
 -- config.color_scheme = "Mono Cyan (Gogh)"
 -- config.color_scheme = "Nord (Gogh)"
+-- config.color_scheme = "Dracula"
 config.color_scheme = "melange_light"
 
 config.window_decorations = "RESIZE"
-config.window_background_opacity = 0.9
-config.macos_window_background_blur = 9
+-- config.window_background_opacity = 0.9
+-- config.macos_window_background_blur = 9
 
 -- Background image settings
 -- config.window_background_image = "/Users/bbkboris/Pictures/wp5144550-retrowave-hd-desktop-wallpapers.jpg"
