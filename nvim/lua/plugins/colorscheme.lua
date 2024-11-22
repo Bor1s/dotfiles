@@ -5,7 +5,8 @@ return {
     opts = {
       -- colorscheme = "kanagawa-wave",
       -- colorscheme = "nordic",
-      colorscheme = "melange",
+      -- colorscheme = "melange",
+      colorscheme = "tokyonight-night",
     },
   },
 }

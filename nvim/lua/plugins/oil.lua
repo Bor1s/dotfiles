@@ -1,8 +1,10 @@
 return {
-  "stevearc/oil.nvim",
-  opts = {
-    default_file_explorer = false,
+  {
+    "stevearc/oil.nvim",
+    ---@module 'oil'
+    ---@type oil.SetupOpts
+    opts = {},
+    -- Optional dependencies
+    dependencies = { { "echasnovski/mini.icons", opts = {} } },
   },
-  -- Optional dependencies
-  dependencies = { "nvim-tree/nvim-web-devicons" },
 }
